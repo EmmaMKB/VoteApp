@@ -10,15 +10,7 @@
 </head>
 <body>
     <div class="main">
-        <header class="navbar">
-            <a href="index.php" class="logo"><h3>Vote App</h3></a>
-            <ul>
-                <li><a href="index.php">Accueil</a></li>
-                <li><a href="all-votes.php">Votes</a></li>
-                <li><a href="login.php">Connexion</a></li>
-                <li><a href="signin.php">Inscription</a></li>
-            </ul>
-        </header>
+        <?php include_once('inc/_header.php') ?>
         <div class="banner">
             <div class="content">
                 <div class="text">
@@ -93,26 +85,7 @@
                 </div>
             </div>
         </section>
-        <footer>
-            <div class="content">
-                <div class="app-description">
-                    <h3>Vote App</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque 
-                        quis aliquid illum fuga id enim, hic commodi repellat maiores. Mollitia, 
-                        laborum sequi delectus eaque nam ipsam! Adipisci, enim. Optio, sequi.</p>
-                </div>
-                <div class="social">
-                    <ul>
-                        <li><a href=""><i class="fa fa-facebook"></i></a></li>
-                        <li><a href=""><i class="fa fa-instagram"></i></a></li>
-                        <li><a href=""><i class="fa fa-linkedin"></i></a></li>
-                    </ul>
-                </div>
-                <div class="copyright">
-                    <p>Tous droits réservés Jean-Baptiste Lubilu</p>
-                </div>
-            </div>
-        </footer>
+        <?php include_once('inc/_footer.php') ?>
     </div>
 </body>
 </html>
