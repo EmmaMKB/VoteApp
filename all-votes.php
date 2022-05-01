@@ -38,7 +38,7 @@
                     <div class="content">
                         <h3>Titre de L'election</h3>
                         <p>details de l'election</p>
-                        <a href="" class="orange-btn">Voir</a>
+                        <a href="vote-details.php" class="orange-btn">Voir</a>
                     </div>
                 </div>
                 <div class="vote-item">
