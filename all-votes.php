@@ -23,10 +23,10 @@
             <div class="content">
                 <div class="text">
                     <h1 class="main-title">
-                        Meilleure plateforme de vote
+                        Toutes les elections
                     </h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quia atque, rem ratione nemo ad. Eligendi quae adipisci quos id quaerat quisquam blanditiis, distinctio ab dolorem asperiores sed velit veniam!</p>
-                    <a class="orange-btn" href="">En Savoir Plus</a>
+                    <a class="orange-btn" href="login.php">Se connecter</a>
                 </div>
                 <div class="votes">
                     <h3>Derniers votes organisés</h3>
@@ -39,13 +39,58 @@
                 </div>
             </div>
         </div>
-        <section class="about">
-            <div class="content">
-                <h1>A Propos de la plateforme</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est mollitia, 
-                    voluptates fuga vitae magni veniam iure, voluptatem ipsa qui ratione 
-                    perspiciatis esse. Enim eum officiis quisquam sequi ipsam quae voluptas!</p>
-                <a href="" class="orange-btn">Se connecter</a>
+        <section class="votes">
+            <h1>Liste des Elections</h1>
+            <div class="votes-block">
+                <div class="vote-item">
+                    <div class="content">
+                        <h3>Titre de L'election</h3>
+                        <p>details de l'election</p>
+                        <a href="" class="orange-btn">Voir</a>
+                    </div>
+                </div>
+                <div class="vote-item">
+                    <div class="content">
+                        <h3>Titre de L'election</h3>
+                        <p>details de l'election</p>
+                        <a href="" class="orange-btn">Voir</a>
+                    </div>
+                </div>
+                <div class="vote-item">
+                    <div class="content">
+                        <h3>Titre de L'election</h3>
+                        <p>details de l'election</p>
+                        <a href="" class="orange-btn">Voir</a>
+                    </div>
+                </div>
+                <div class="vote-item">
+                    <div class="content">
+                        <h3>Titre de L'election</h3>
+                        <p>details de l'election</p>
+                        <a href="" class="orange-btn">Voir</a>
+                    </div>
+                </div>
+                <div class="vote-item">
+                    <div class="content">
+                        <h3>Titre de L'election</h3>
+                        <p>details de l'election</p>
+                        <a href="" class="orange-btn">Voir</a>
+                    </div>
+                </div>
+                <div class="vote-item">
+                    <div class="content">
+                        <h3>Titre de L'election</h3>
+                        <p>details de l'election</p>
+                        <a href="" class="orange-btn">Voir</a>
+                    </div>
+                </div>
+                <div class="vote-item">
+                    <div class="content">
+                        <h3>Titre de L'election</h3>
+                        <p>details de l'election</p>
+                        <a href="" class="orange-btn">Voir</a>
+                    </div>
+                </div>
             </div>
         </section>
         <footer>
