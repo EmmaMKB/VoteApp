@@ -1,3 +1,7 @@
+<?php 
+    namespace Admin;
+    use Controllers\ElectionController;
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -119,30 +123,31 @@
                                                     <span aria-hidden="true">&times;</span>
                                                 </button>
                                             </div>
-                                            <form action="" method="post">
+                                            <form action="../app/controllers/ElectionController.php" method="post">
+                                                <input type="hidden" name="action" value="post_election">
                                                 <div class="modal-body">
                                                     <div class="form-group row">
                                                         <label for="example-text-input" class="col-sm-2 col-form-label">Titre</label>
                                                         <div class="col-sm-10">
-                                                            <input name="title" class="form-control" type="text" id="example-text-input">
+                                                            <input name="title" required class="form-control" type="text" id="example-text-input">
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
                                                         <label for="example-search-input" class="col-sm-2 col-form-label">Description</label>
                                                         <div class="col-sm-10">
-                                                            <input name="description" class="form-control" type="text" id="example-search-input">
+                                                            <input name="description" required class="form-control" type="text" id="example-search-input">
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
                                                         <label for="example-email-input" class="col-sm-2 col-form-label">Date de Debut</label>
                                                         <div class="col-sm-10">
-                                                            <input name="start_date" class="form-control" type="datetime-local"  id="example-email-input">
+                                                            <input name="start_date" required class="form-control" type="datetime-local"  id="example-email-input">
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
                                                         <label for="example-email-input" class="col-sm-2 col-form-label">Date de Fin</label>
                                                         <div class="col-sm-10">
-                                                            <input name="end_date" class="form-control" type="datetime-local"  id="example-email-input">
+                                                            <input name="end_date" required class="form-control" type="datetime-local"  id="example-email-input">
                                                         </div>
                                                     </div>
                                                 </div>

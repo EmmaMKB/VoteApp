@@ -16,15 +16,19 @@
 
     class DbConnection {
 
+        public $db;
+
         public function __construct()
         {
-            $conn = \mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_DATABASE);
+            $conn = new \mysqli(DB_HOST,DB_USER,DB_PASSWORD,DB_DATABASE);
 
             if (!$conn)
             {
                 die ("<h1>Database Connection Failed</h1>". mysqli_connect_error());
             }
-            return $this->conn = $conn;
+            // return $conn;
+
+            $this->db = $conn;
         }
 
         
