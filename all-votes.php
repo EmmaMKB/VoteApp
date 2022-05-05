@@ -1,3 +1,7 @@
+<?php 
+    use Controllers\ElectionController;
+    require_once (__DIR__.'\app\controllers\ElectionController.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,55 +38,21 @@
         <section class="votes">
             <h1>Liste des Elections</h1>
             <div class="votes-block">
+                <?php 
+                    $votes = ElectionController::get_all();
+                    
+                    foreach ($votes as $vote) {
+                ?>
                 <div class="vote-item">
                     <div class="content">
-                        <h3>Titre de L'election</h3>
-                        <p>details de l'election</p>
-                        <a href="vote-details.php" class="orange-btn">Voir</a>
+                        <h3><?php echo $vote['title'] ?></h3>
+                        <p><?php echo $vote['description'] ?></p>
+                        <a href="vote-details.php?id=<?php echo $vote['id'] ?>" class="orange-btn">Voir</a>
                     </div>
                 </div>
-                <div class="vote-item">
-                    <div class="content">
-                        <h3>Titre de L'election</h3>
-                        <p>details de l'election</p>
-                        <a href="" class="orange-btn">Voir</a>
-                    </div>
-                </div>
-                <div class="vote-item">
-                    <div class="content">
-                        <h3>Titre de L'election</h3>
-                        <p>details de l'election</p>
-                        <a href="" class="orange-btn">Voir</a>
-                    </div>
-                </div>
-                <div class="vote-item">
-                    <div class="content">
-                        <h3>Titre de L'election</h3>
-                        <p>details de l'election</p>
-                        <a href="" class="orange-btn">Voir</a>
-                    </div>
-                </div>
-                <div class="vote-item">
-                    <div class="content">
-                        <h3>Titre de L'election</h3>
-                        <p>details de l'election</p>
-                        <a href="" class="orange-btn">Voir</a>
-                    </div>
-                </div>
-                <div class="vote-item">
-                    <div class="content">
-                        <h3>Titre de L'election</h3>
-                        <p>details de l'election</p>
-                        <a href="" class="orange-btn">Voir</a>
-                    </div>
-                </div>
-                <div class="vote-item">
-                    <div class="content">
-                        <h3>Titre de L'election</h3>
-                        <p>details de l'election</p>
-                        <a href="" class="orange-btn">Voir</a>
-                    </div>
-                </div>
+                <?php 
+                    }
+                ?>
             </div>
         </section>
         <?php include_once('inc/_footer.php') ?>

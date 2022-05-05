@@ -81,7 +81,7 @@
                         <ul class="navigation-menu">
 
                             <li class="has-submenu">
-                                <a href="index.html"><i class="dripicons-meter"></i> Accueil</a>
+                                <a href="/admin/"><i class="dripicons-meter"></i> Accueil</a>
                             </li>
 
                             <li class="has-submenu">

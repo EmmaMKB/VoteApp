@@ -14,19 +14,24 @@ class ElectionModel {
 
     private static $db;
 
-    public function __construct($title, $start_date, $end_date, $description)
+    public function __construct()
+    {
+        self::$db = new DbConnection();
+    }
+
+    public function __init($title, $start_date, $end_date, $description)
     {
         $this->title = $title;
         $this->start_date = $start_date;
         $this->end_date = $end_date;
         $this->description = $description;
 
-        self::$db = new DbConnection();
     }
 
     public static function get_all()
     {
-        $res = self::$db->db->query("SELECT * FROM CANDIDATE");
+        $res = self::$db->db->query("SELECT * FROM ELECTIONS");
+        return $res;
     }
 
     public function new()
