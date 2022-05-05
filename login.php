@@ -14,15 +14,25 @@
         <section class="login-form">
             <div class="content">
                 <h1>Connexion</h1>
-                <form class="form" action="" method="post">
+                <?php 
+                    if (isset($_REQUEST['error'])) {
+                ?>
+                 <div class="error">
+                    <p style="color: red; text-align:center">Erreur lors de la connexion</p>
+                </div>
+                <?php
+                    }
+                ?>
+                <form class="form" action="app/controllers/UserController.php" method="post">
                     <div class="input">
                         <label for="">Mail</label>
-                        <input type="email" name="" placeholder="Votre Adresse Mail" id="">
+                        <input type="email" name="email" placeholder="Votre Adresse Mail" id="">
                     </div>
                     <div class="input">
                         <label for="">Mot de Passe</label>
-                        <input type="password" name="" placeholder="Votre Mot de Passe" id="">
+                        <input type="password" name="password" placeholder="Votre Mot de Passe" id="">
                     </div>
+                    <input type="hidden" name="action" value="login">
                     <button class="orange-btn">Se connecter</button>
                 </form>
             </div>
