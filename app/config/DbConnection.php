@@ -24,7 +24,6 @@
             {
                 die ("<h1>Database Connection Failed</h1>". mysqli_connect_error());
             }
-            echo "Database Connected Successfully";
             return $this->conn = $conn;
         }
 
