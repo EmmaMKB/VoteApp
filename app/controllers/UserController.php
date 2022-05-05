@@ -8,6 +8,9 @@ if ($_POST) {
     if ($_POST['action']=="post_user") {
         UserController::register();
     }
+    elseif ($_POST['action']=="login") {
+        UserController::login();
+    }
 }
 
 class UserController {
@@ -25,5 +28,22 @@ class UserController {
         }
 
         header("Location: /signin.php");
+    }
+    
+    public static function login()
+    {
+        
+        $db = new UserModel();
+        
+        $user = $db::get($_POST['email'], $_POST['password']);
+        
+        if($user->num_rows > 0) {
+            session_start();
+            $_SESSION["email"] = $_POST['email'];
+            return header("Location: /");
+        }
+        
+        header("Location: /login.php?error=true");
+
     }
 }

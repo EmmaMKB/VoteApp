@@ -33,4 +33,6 @@ class ElectionController {
 
         return $data;
     }
+
+   
 }

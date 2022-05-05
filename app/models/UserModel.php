@@ -39,4 +39,15 @@ class UserModel {
         $stmt->bind_param("sssss", $this->name, $this->email, $this->password, $this->tel, $this->role);
         $stmt->execute();
     }
+
+    public static function get($email, $password)
+    {
+        $query = "SELECT * FROM USERS WHERE email=? AND password=?";
+        $stmt = self::$db->db->prepare($query);
+        $stmt->bind_param("ss", $email, $password);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result;
+    }
 }
