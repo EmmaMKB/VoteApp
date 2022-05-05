@@ -16,5 +16,6 @@ class ElectionController {
     {
         $data = new ElectionModel($_POST['title'], $_POST['start_date'], $_POST['end_date'], $_POST['description']);        
         $data->new();
+        header("Location: /admin/", true, 301);
     }
 }
